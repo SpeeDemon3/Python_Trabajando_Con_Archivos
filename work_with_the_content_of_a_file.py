@@ -12,3 +12,9 @@ for line in lines:
 
 print(pi_str)
 print(len(pi_str))
+
+birthday = input("Enter your birthday, in the form MMddYY: ")
+if(birthday in pi_str):
+    print("Your birthday appears in the digits of pi!!!")
+else:
+    print("Your birthday doesn't appears in the digits of pi.")
