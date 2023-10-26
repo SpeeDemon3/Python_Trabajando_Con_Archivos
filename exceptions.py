@@ -58,3 +58,4 @@ words = contents_tale.split()
 # Obtenemos el numero aproximado de palabras
 number_words = len(words)
 print(f"The file {tale} has about {number_words} words.")
+
