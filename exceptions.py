@@ -59,3 +59,25 @@ words = contents_tale.split()
 number_words = len(words)
 print(f"The file {tale} has about {number_words} words.")
 
+### TRABAJAR CON MULTIPLES ARCHIVOS
+
+"""Metodo para obtener el numero de palabras que contiene un texto aproximadamente"""
+def count_words(file: object) -> object:
+    try:
+        with open(file, encoding="utf-8") as f:
+            contents_file = f.read()
+    except FileNotFoundError:
+        print(f"The file {file} doesn't exist.")
+    else:
+        words_list = contents_file.split()
+        num_words = len(words)
+
+        print(f"The file {file} has about {num_words} words.")
+
+
+file_java_tale = "java_tale.txt"
+count_words(file_java_tale)
+
+filenames = [file_not, "python_tale.txt", "java_tale.txt"]
+for filename in filenames:
+    count_words(filename)
