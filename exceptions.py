@@ -33,3 +33,28 @@ while running:
 
 ### Manejar la Excepcion FileNotFoundError
 
+# Guardo en una variable un archivo no existente
+file_not = "file.txt"
+
+try:
+    with open(file_not, encoding='utf-8') as f:
+        contents = f.read()
+except FileNotFoundError:
+    print(f"The file {file_not} does not exist.")
+
+
+### Analizamos un archivo que si existe
+
+tale = 'python_tale.txt'
+
+try:
+    with open(tale, encoding="utf-8") as f:
+        contents_tale = f.read()
+except FileNotFoundError:
+    print(f"The file {tale} does not exist.")
+
+# Partimos el texto por palabras con el metodo split()
+words = contents_tale.split()
+# Obtenemos el numero aproximado de palabras
+number_words = len(words)
+print(f"The file {tale} has about {number_words} words.")
