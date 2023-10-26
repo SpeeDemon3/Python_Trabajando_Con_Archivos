@@ -7,7 +7,7 @@ with open(file) as file_object:
 print('##############################################')
 
 with open(file) as file_object:
-    for file in file_object:
+    for line in file_object:
         print(file.strip())
 
 print('##############################################')
@@ -18,6 +18,6 @@ with open(file) as file_object:
 string_lines = ""
 
 for line in list_lines:
-    string_lines += line.strip()
+    string_lines += line
 
 print(string_lines)
